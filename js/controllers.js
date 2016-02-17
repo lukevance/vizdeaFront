@@ -1,4 +1,6 @@
-angular.module('templateApp')
+'use strict';
+
+angular.module('vizdea')
   .controller('MainController', [MainController]);
 
 
