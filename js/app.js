@@ -1,1 +1,1 @@
-angular.module('templateApp', []);
+angular.module('vizdea', ['angular-loading-bar']);
