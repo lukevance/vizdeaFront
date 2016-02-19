@@ -2,15 +2,50 @@
 <html ng-app="vizdea">
   <head>
     <meta charset="utf-8">
-    <title>Angular Template</title>
+    <title>Create A New Vision</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   </head>
   <body ng-controller="NewVizions as NV">
-    <h1>{{ MC.title }}</h1>
-    <h3>{{ MC.subtitle }}</h3>
-    
+    <div ng-controller="MainController as MC">
+      <ng-include src="'partials/nav.html'"></ng-include>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
 
+        </div>
+        <div class="col-md-8">
+          <form>
+            <div class="form-group">
+              <label for="who">Who is the most specific group of people you can think of who will use {{NV.title}}?</label>
+              <textarea type="textarea" class="form-control" id="who" placeholder="Doctors under the age of 35 in North Dakota" ng-model="NV.who"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="what">As concisely as possible what does {{NV.title}} do for those people?</label>
+              <textarea type="textarea" class="form-control" id="what" placeholder="Helps them connect with other doctors in real-time by use of two tin cans and a long string." ng-model="NV.what"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="why">What is the biggest reason/driver that these people need {{NV.title}}?</label>
+              <textarea type="textarea" class="form-control" id="why" placeholder="Hospitals in North Dakota are very loud and I don't like to use my pager." ng-model="NV.why"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-default" ng-click="NV.submit(NV.who, NV.what, NV.why)">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- jQuery for Angular and bootstrap -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js" charset="utf-8"></script>
+    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js'></script>
     <script src="./js/app.js"></script>
     <script src="./js/controllers.js"></script>
+    <script src="./js/controllers/newVision.controller.js"></script>
   </body>
 </html>
