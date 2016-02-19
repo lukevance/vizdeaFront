@@ -14,6 +14,7 @@ function NewVizions () {
     console.log(who);
     console.log(why);
     console.log(what);
+
   }
 
 
