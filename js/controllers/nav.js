@@ -13,6 +13,7 @@ function nav(authSRC) {
 			authSRC.signInSRC(email, password)
 			.then(function(res) {
 				vm.user = res.data;
+				//return jwt
 				console.log(vm.user);
 			}).catch(function(err) {
 				console.log(err);
