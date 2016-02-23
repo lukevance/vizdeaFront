@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('vizdea')
-  .controller('NewVizions', ['postNewViz', NewVizions]);
+  .controller('NewVisions', [ NewVisions]);
 
 
-function NewVizions (postNewViz) {
+function NewVisions () {
   var vm = this;
   vm.title = 'Angular Template App';
   vm.subtitle = 'Welcome to Angular!';
@@ -14,7 +14,7 @@ function NewVizions (postNewViz) {
     console.log(who);
     console.log(why);
     console.log(what);
-    postNewViz(who, why, what);
+    // postNewViz(who, why, what);
   }
 
 
